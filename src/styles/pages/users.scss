@@ -1,0 +1,21 @@
+.users__page{
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+.users__page-title {
+    font-family: "WorkSans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    margin-left: 20px;
+      margin-top: 20px;
+    line-height: 28px;
+    color: #213f7d;
+  
+  
+    @media (max-width: 576px) {
+        margin-left: 60px;
+    margin-top: 60px;
+    }
+  }

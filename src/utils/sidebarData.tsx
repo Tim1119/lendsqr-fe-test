@@ -50,6 +50,7 @@ export const sidebarNavItems = [
 		icon:  <Users className="sidebar__icon" />,
 		link: '/dashboard/users',
 		id: 4,
+		selected:true,
 	},
 	{
 		title: 'Guarantors',

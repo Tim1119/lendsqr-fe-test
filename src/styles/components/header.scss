@@ -65,6 +65,7 @@
     display: none;
     justify-content: space-around;
     align-items: center;
+    background-color: green;
 
     p{
         text-decoration: underline;
@@ -139,7 +140,7 @@
     }
     .header__top-right{
         display: flex;
-        flex: 0.26;
+        flex: 0.4;
         max-width: 28%;
         margin-right: 30px;
     }
