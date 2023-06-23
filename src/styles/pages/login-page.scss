@@ -1,0 +1,163 @@
+.login {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.login__container {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+}
+.logo {
+  margin-top: 40px;
+}
+
+.login__main-container {
+  display: flex;
+  justify-content: space-between;
+  height: 76%;
+  gap: 5%;
+  margin-top: -15px;
+  
+}
+.login__photo-illustration-container {
+  display: none;
+  width: 100%;
+  object-fit: contain;
+
+  .photo-illustration {
+    width: inherit;
+    margin-left: -20px;
+  }
+}
+
+.login__form-container {
+  width: 100%;
+  height: 100%;
+
+
+  & > h3 {
+    font-family: "Avenir Next", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: -0.04em;
+    color: #213f7d;
+  }
+  & > p {
+    font-family: "Avenir Next", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    margin: 10px 0px 30px 0px;
+    color: #545f7d;
+  }
+
+  input {
+    background-color: #fff;
+    border: 2px solid #e6e7ec;
+    outline: none;
+    height: 45px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-family: "Avenir Next", sans-serif;
+    font-size: 14px;
+    color: rgba(#545f7d, 0.6);
+
+    &:focus {
+      border-color: #39cdcc;
+      outline-width: 0;
+    }
+  }
+
+  & > form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+form {
+    & > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0px;
+
+        input {
+            width: 100%;
+          }
+
+          small {
+            color: #c80707;
+            font-family: "Avenir Next", sans-serif;
+            margin: 4px 0px;
+          }
+      }
+      p {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-family: "Avenir Next", sans-serif;
+        color: #39cdcc;
+        font-weight: bold;
+        margin: 10px 0px;
+        font-size: 10px;
+      }
+      button {
+        width: 100%;
+        height: 48px;
+        top: 563px;
+        left: 836px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 10px 0px;
+        background-color: #39cdcc;
+        color: white;
+        letter-spacing: 4px;
+        border: none;
+        font-weight: bold;
+        box-shadow: none;
+      }
+
+}
+
+
+
+
+
+@media (min-width: 992px) {
+    .login__container {
+        justify-content: space-around;
+    }
+  .login__main-container {
+    gap: 5%;
+  }
+  .login__photo-illustration-container {
+    display: inline-flex;
+    display: flex;
+    width: 90%;
+  }
+  .login__form-container {
+    width: 70%;
+  }
+  .login__form-container {
+    & > form{
+        width: 80%;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .login__photo-illustration-container {
+    display: inline-flex;
+    display: flex;
+  }
+ 
+}
+
