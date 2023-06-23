@@ -9,7 +9,7 @@ const Header = () => {
     <header className="header" >
         <div className="header__container" >
             <section className="header__top-left" >
-                <Logo />
+                <Logo className="header__logo" />
                 <div className="header__search-container" >
                     <input type="text" placeholder="Search for anything" />
                     <button>
