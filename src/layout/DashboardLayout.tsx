@@ -1,6 +1,6 @@
 import Header from "../components/Header"
 import Sidebar from "../components/Sidebar"
-import Users from "../pages/Users"
+import Users from "../pages/dashboard/Users"
 
 const DashboardLayout = () => {
   return (

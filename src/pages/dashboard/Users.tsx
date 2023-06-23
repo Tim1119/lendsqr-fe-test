@@ -1,7 +1,7 @@
 import React from 'react'
-import { dashboardInformation } from '../utils/dashboardInfo'
-import UserInformationCard from '../components/UserInformationCard'
-import UserInformationFeed from '../components/UserInformationFeed'
+import { dashboardInformation } from '../../utils/dashboardInfo'
+import UserInformationCard from '../../components/UserInformationCard'
+import UserInformationFeed from '../../components/UserInformationFeed'
 
 const Users = () => {
   return (
