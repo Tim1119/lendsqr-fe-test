@@ -54,7 +54,7 @@ const Login = () => {
                         <small> {formErrorData.password}</small>
                             <PasswordInput value={formData.password} onChange={(e: React.ChangeEvent<HTMLInputElement>) =>setFormData({...formData,email:e.target.value})} required />
                         </div>
-                        <p style={{"cursor":"pointer"}} >Forgot Password?</p>
+                        <p>Forgot Password?</p>
                         <button>LOG IN</button>
                     </form>
                 </div>

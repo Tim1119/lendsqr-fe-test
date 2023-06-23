@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import Login from './pages/Login';
+// import Dashboard from './pages/Dashboard';
+import DashboardLayout from './layout/DashboardLayout';
 
 function App() {
   return (
@@ -20,7 +22,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Login />
+      <DashboardLayout />
     </div>
   );
 }
