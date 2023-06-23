@@ -1,0 +1,31 @@
+.sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow-y: scroll;
+    height: 100%;
+    top:100px;
+    bottom: 0px; 
+    // width: 18%;
+    
+    
+}
+.sidebar__link{
+  display: flex;
+  font-family: "WorkSans", sans-serif;
+  align-items: center;
+  gap:10px;
+  margin: 10px 0px;
+  background-color: red;
+  padding-left: 30px;
+    min-height: 40px;
+
+  
+}
+.sidebar__icon{
+    width: 18px;
+    height: 18px;
+    font-weight: 400;
+    font-size: small;
+}

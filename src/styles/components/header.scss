@@ -1,15 +1,19 @@
 .header{
     display: flex;
+    grid-area: header;
     width: 100%;
     margin: auto;
     height: 100px;
     border-bottom: 1px solid lightgray;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
 }
 
 .header__container{
     display: flex;
     justify-content: space-between;
-    width: 95%;
+    width: 90%;
     height: 100%;
     align-items: center;
     margin:auto;
@@ -20,7 +24,7 @@
     width: auto;
 
     .header__logo{
-        width: 120;
+        width: 145px;
         height: 32px;
     }
 }
@@ -109,6 +113,20 @@
     }
 }
 
+.header__menu{
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+    // background-color: red;
+
+    img{
+        width: 30px;
+        height: 30px;
+        color: green;
+    }
+   }
 
 
 
@@ -121,8 +139,9 @@
     }
     .header__top-right{
         display: flex;
-        flex: 0.48;
+        flex: 0.26;
         max-width: 28%;
+        margin-right: 30px;
     }
     .header__search-container{
         display: flex;
@@ -130,5 +149,8 @@
     }
     .header__menu{
      display: none;
+    }
+    .header__container{
+        width: 96%;
     }
 }
