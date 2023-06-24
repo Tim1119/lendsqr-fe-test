@@ -1,5 +1,5 @@
 .users__page{
-    width: 100%;
+    width:100%;
     height: 100%;
   
 }
@@ -12,12 +12,33 @@
       margin-top: 40px;
     line-height: 28px;
     color: #213f7d;
+    
   
     @media (min-width:576px) {
         margin-left: 40px;
     }
-    // @media (min-width: 768px) {
-    //     margin-left: 60px;
-    //     margin-top: 60px;
-    // }
+  }
+
+  .users__table-container{
+    background: #ffffff;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    margin-left: auto;
+    margin-right: auto;
+    width: inherit;
+    max-width: 93vw;
+    border-radius: 4px;
+    margin-top: 60px;
+    margin-bottom: 20px;  
+    overflow-x: auto;
+  
+    @media (min-width: 992px) {
+      // margin: 60px 60px 20px 60px;
+      max-width: 93%;
+    }
+  
+    @media (min-width: 865px) {
+      margin-left: auto;
+    margin-right: auto;
+    }
   }

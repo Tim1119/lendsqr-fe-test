@@ -27,7 +27,7 @@ const UsersTable = () => {
                   "DATE JOINED",
                   "STATUS",
                 ].map((heading) => (
-                  <th className="table-heading" key={heading}>
+                  <th className="user__table-heading" key={heading}>
                     <Popover style={{ position: "relative" }}>
                       {() => (
                         <>
@@ -36,8 +36,8 @@ const UsersTable = () => {
                             <FilterIcon />
                           </Popover.Button>
                           <Transition as={Fragment}>
-                            <Popover.Panel className="popover-panel">
-                              <div className="filter-container">
+                            <Popover.Panel className="user__popover-panel">
+                              <div className="user__filter-container">
                                 <form>
                                   <label
                                     htmlFor="organization"
