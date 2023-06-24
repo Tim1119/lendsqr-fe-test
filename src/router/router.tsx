@@ -9,6 +9,7 @@ import Login from "../pages/Login";
 import { lazy, Suspense } from "react";
 import DashboardLayout from "../layout/DashboardLayout";
 import Users from "../pages/dashboard/Users";
+import UserDetail from "../pages/dashboard/UserDetail";
 
 
 export const router = createBrowserRouter([
@@ -34,6 +35,14 @@ export const router = createBrowserRouter([
           element: (
             <Suspense fallback={<Loader/>}>
               <Users />
+            </Suspense>
+          ),
+        },
+        {
+          path: "/dashboard/users/:id",
+          element: (
+            <Suspense fallback={<Loader/>}>
+              <UserDetail />
             </Suspense>
           ),
         },

@@ -6,17 +6,21 @@
     "header"
     "main-view";
     height: 100vh;
-
-    
+    overflow-y: hidden;    
 }
 .main-view{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    // border: px solid yellow;
     grid-area:main-view;
-    // background-color: pink;
     background-color: #fbfbfb;
+    // overflow-y: scroll;
+    flex-grow: 1;
+    overflow-anchor: none;
+    overflow: auto;
+    // height:fit-content;
+    // max-height: 100vh;
+   
 }
 
 
@@ -30,6 +34,7 @@
         grid-template-areas:
         "header header"
         "sidebar main-view";
-        height: 100vh;
+        // height: 100vh;
+        // overflow-y: scroll;
     }
 }
