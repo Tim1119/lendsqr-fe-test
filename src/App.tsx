@@ -1,34 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {lazy,Suspense} from 'react'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './App.css'
+import Loader from './components/Loader';
+import ErrorPage from './pages/error/ErrorPage';
+import DashboardLayout from './layout/DashboardLayout';
+import ErrorBoundary from './components/errors/ErrorBoundary';
+import PageNotFound from './pages/error/PageNotFound';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const LoginPage = lazy(() => import("./pages/LoginPage"));
+  const DashboardPage = lazy(() => import("./pages/DashboardPage"));
+  const UsersPage = lazy(() => import("./pages/users/UsersPage"));
+  const UserDetailPage = lazy(() => import("./pages/users/UserDetailPage"));
+
+
+  const router = createBrowserRouter([
+    {
+      path: "",
+      element: <LoginPage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "login",
+      element: <LoginPage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/",
+      element: <DashboardLayout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: "dashboard",
+          element: <DashboardPage />,
+        },
+        {
+          path: "users",
+          element: <UsersPage />,
+        },
+        {
+          path: "users/:userId",
+          element: <UserDetailPage />,
+        },
+      ],
+    },
+    {
+      path: "*",
+      element: <PageNotFound />,
+    },
+  ]);
+  
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <ErrorBoundary>
+      <Suspense fallback={<Loader />}>
+        <RouterProvider router={router} />
+      </Suspense>
+    </ErrorBoundary>
   )
 }
 
