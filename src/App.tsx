@@ -1,11 +1,11 @@
 import {lazy,Suspense} from 'react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import './App.css'
 import Loader from './components/Loader';
 import ErrorPage from './pages/error/ErrorPage';
 import DashboardLayout from './layout/DashboardLayout';
 import ErrorBoundary from './components/errors/ErrorBoundary';
 import PageNotFound from './pages/error/PageNotFound';
+import './App.scss'
 
 
 function App() {
