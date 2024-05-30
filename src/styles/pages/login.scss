@@ -11,6 +11,7 @@
     grid-template-columns:1fr;
     height:100%;
 
+   
     @include breakpointMediumScreen{
         grid-template-columns: 1fr 1fr;
     }
@@ -22,8 +23,7 @@
     display:none;
     gap:50px;
     background-color:$gray-white;
-    // background-color:yellow;
-
+    
     @include breakpointMediumScreen{
         display:grid;
     }
@@ -55,7 +55,7 @@
     display:grid;
     place-items:center;
     position:relative; 
-
+    
     img{
         top:40px;
         position:absolute;
@@ -77,7 +77,7 @@
         width: 70%;
     }
     @include breakpointMediumScreen{
-        width: 60%;
+        width: 80%;
     }
     @include breakpointLargeScreen{
         width: 75%;
@@ -125,6 +125,7 @@ form{
         @include input-mixin('email');
         @include input-mixin('password');
         @include input-mixin('text');
+       
     }
 
     .login-form__input-password{
@@ -163,6 +164,13 @@ form{
 
     button{
        @include form-button
+    }
+
+    .login-form__error-message{
+        font-family:$avenirNext;
+        color:$form-error;
+		font-size: 14px;
+        margin-top:5px;
     }
 
     

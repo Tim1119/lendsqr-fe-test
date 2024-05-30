@@ -3,6 +3,7 @@
 
 @mixin input-mixin($type) {
     margin:20px 0px;
+    
 
 
     input[type="#{$type}"] {
@@ -14,6 +15,7 @@
         border-radius: 5px;
         font-style: normal; 
         font-family: $avenirNext;
+        margin-bottom:5px;
        
 
         &::placeholder {

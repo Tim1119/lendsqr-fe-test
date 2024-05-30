@@ -1,15 +1,33 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useNavigate } from 'react-router-dom';
 
+interface LoginFormData {
+  email: string;
+  password: string;
+}
 
 const LoginForm = () => {
-
+  
     const [showPassword,setShowPassword] =useState(false)
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, handleSubmit, formState: { errors } } = useForm<LoginFormData>();
+    
 
-  console.log(watch("example")); // watch input value by passing the name of it
+    // This my submit function simulates sending the user data i.e username and password 
+    // to the server and getting a 200 success request after 2 seconds
+    const onSubmit: SubmitHandler<LoginFormData> = (_data) => {
+      setLoading(true);
+      // Simulate a login request
+      setTimeout(() => {
+        setLoading(false);
+        navigate('/dashboard');
+      }, 2000); // Simulate the 2-second loading time
+    };
+
+ 
 
   const togglePassword = ()=>{
     setShowPassword(!showPassword)
@@ -21,8 +39,8 @@ const LoginForm = () => {
             <input type="email" placeholder="Email"  {...register("email", { required: true })} />
             {errors.email && <span className="login-form__error-message" >Email Address is required</span>}
         </div>
-        <div>
-            <div className='login-form__input-container login-form__input-password' >
+        <div className='login-form__input-container'>
+            <div className='login-form__input-password' >
 
             <input type={showPassword ? "text" : "password"} placeholder="Password"  {...register("password", { required: true })} />
             <span className="login-form__password-toggler" onClick={togglePassword} >{showPassword ? "HIDE" : "SHOW"}</span>
