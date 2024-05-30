@@ -1,8 +1,17 @@
 import React from 'react'
 
-const Sidebar = () => {
+interface SidebarProps {
+    isOpen: boolean;
+    toggleSidebar: () => void;
+  }
+
+const Sidebar = ({ isOpen, toggleSidebar }:SidebarProps) => {
   return (
-    <div>Sidebar</div>
+    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+        bfhabsahfbashbfashbfajh
+      {/* Sidebar content */}
+      <button onClick={toggleSidebar}>Toggle Sidebar</button>
+    </div>
   )
 }
 
