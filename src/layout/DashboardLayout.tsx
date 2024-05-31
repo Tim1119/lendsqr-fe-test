@@ -13,7 +13,7 @@ const DashboardLayout = () => {
 
   return (
     <div className={`dashboard ${isSidebarOpen ? 'sidebar-open' : ''}`}>
-    <Navbar />
+    <Navbar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     <div>
       <Outlet />

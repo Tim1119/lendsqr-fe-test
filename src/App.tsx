@@ -11,7 +11,6 @@ import './App.scss'
 function App() {
 
   const LoginPage = lazy(() => import("./pages/LoginPage"));
-  const DashboardPage = lazy(() => import("./pages/DashboardPage"));
   const UsersPage = lazy(() => import("./pages/users/UsersPage"));
   const UserDetailPage = lazy(() => import("./pages/users/UserDetailPage"));
 
@@ -28,16 +27,12 @@ function App() {
       errorElement: <ErrorPage />,
     },
     {
-      path: "/",
+      path: "/dashboard/users",
       element: <DashboardLayout />,
       errorElement: <ErrorPage />,
       children: [
         {
-          path: "dashboard",
-          element: <DashboardPage />,
-        },
-        {
-          path: "users",
+          path: "",
           element: <UsersPage />,
         },
         {

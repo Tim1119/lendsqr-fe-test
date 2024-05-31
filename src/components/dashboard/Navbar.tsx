@@ -6,13 +6,20 @@ import profilePicture from '../../assets/icons/navbar/profile-picture.png'
 import chevronDown from '../../assets/icons/navbar/chevron.svg'
 import { Link } from 'react-router-dom'
 import hamBurgerIcon from '../../assets/icons/navbar/menu.svg'
+import closeIcon from '../../assets/icons/navbar/close.svg'
 
-const Navbar = () => {
+
+interface NavbarProps {
+    isOpen: boolean;
+    toggleSidebar: () => void;
+  }
+
+const Navbar = ({ isOpen, toggleSidebar }:NavbarProps) => {
   return (
     <nav className="navbar">
         <div className='navbar__left-container' >
-        <div className="navbar__hamburger-large-screen-container">
-            <img src={hamBurgerIcon} className='navbar__hamburger-large-screen' alt="hamburger" />
+        <div onClick={toggleSidebar} className="navbar__hamburger-large-screen-container">
+            <img src={hamBurgerIcon}  className='navbar__hamburger-large-screen' alt="hamburger" />
         </div>
         <div>
             <Link to='/dashboard/users' >
@@ -39,8 +46,8 @@ const Navbar = () => {
             </div>
             
         </div>
-        <div className="navbar__hamburger-small-screen-container">
-                <img src={hamBurgerIcon} className='navbar__hamburger-small-screen' alt="hamburger" />
+        <div onClick={toggleSidebar} className="navbar__hamburger-small-screen-container">
+                <img src={isOpen ?  closeIcon:hamBurgerIcon } className='navbar__hamburger-small-screen' alt="hamburger" />
         </div>
     </nav>
   )

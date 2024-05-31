@@ -1,4 +1,10 @@
-import React from 'react'
+
+import {SidebarNavigationData} from '../../utils/SidebarNavigation'
+import SidebarLink from './SidebarLink';
+import { useLocation, useNavigate } from 'react-router-dom';
+import '../../styles/components/sidebar.scss'
+import lendsqrLogo from '../../assets/images/logo.svg'
+import closeIcon from '../../assets/icons/navbar/close.svg'
 
 interface SidebarProps {
     isOpen: boolean;
@@ -6,11 +12,48 @@ interface SidebarProps {
   }
 
 const Sidebar = ({ isOpen, toggleSidebar }:SidebarProps) => {
+
+    const pathname:string = useLocation().pathname;
+	const navigate = useNavigate();
+
+
+    const isRouteActive = (route:string) => {
+		if (pathname === '/dashboard' && route === '/dashboard') {
+			return true;
+		}
+		const path = route.split('/')[2];
+		return Boolean(pathname.includes(path));
+	};
+
   return (
-    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-        bfhabsahfbashbfashbfajh
+    <div className={`sidebar ${isOpen ? 'sidebar--toggle' : ''}`}>
+       
       {/* Sidebar content */}
-      <button onClick={toggleSidebar}>Toggle Sidebar</button>
+      <div className="sidebar__nav-header">
+        <div>
+            <img className='sidebar__logo' src={lendsqrLogo} alt="logo"  />
+        </div>
+        <div className='sidebar__close-icon-container' onClick={toggleSidebar} >
+            <img src={closeIcon} className='sidebar__close-icon' alt="close" />
+        </div>
+      </div>
+
+      {SidebarNavigationData.map((sidebarLinkData,index)=>(
+        <div> 
+         <SidebarLink 
+            key={index} 
+                title={sidebarLinkData.title} 
+                icon={sidebarLinkData.icon} 
+                link={sidebarLinkData.link} 
+                toggleIcon={sidebarLinkData.toggleIcon}
+                id={sidebarLinkData.id} 
+                header={sidebarLinkData.header} 
+                isActive={isRouteActive(sidebarLinkData.link)} 
+                
+        />
+        </div>
+      ))}
+     
     </div>
   )
 }
