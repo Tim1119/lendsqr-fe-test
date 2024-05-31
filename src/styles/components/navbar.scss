@@ -5,13 +5,15 @@
 .navbar{
     height:100px;
     background-color:$white;
-    // background-color:red;
     width:100%;
     display:flex;
     align-items:center;
     justify-content:space-between;
     font-family:$workSans;
     box-shadow:$navbar-box-shadow;
+    position:fixed;
+    top:0px;
+    z-index: 999;
 }
 
 .navbar__left-container{
@@ -39,8 +41,7 @@
         }  
     }
 
-    .navbar__hamburger-large-screen{
-        
+    .navbar__hamburger-large-screen{ 
         width:32px;
         height:32px;
         cursor:pointer;
@@ -134,9 +135,6 @@
         font-family:$roboto;
          margin-right:40px;
         cursor:pointer;
-       
-
-        
     }
 
     .navbar__notification{
@@ -187,7 +185,7 @@
     align-items:center;
     height:fit-content;
     margin-right:30px;
-    // background-color:green;
+    
 
     @include breakpointMediumScreen{
         display:none;
@@ -199,4 +197,8 @@
     height:32px;
     cursor:pointer;
     object-fit:contain;
+}
+
+.navbar--toggle-z-index{
+    z-index: 999;
 }

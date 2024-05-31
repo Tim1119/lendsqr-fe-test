@@ -14,7 +14,7 @@ interface SidebarProps {
 const Sidebar = ({ isOpen, toggleSidebar }:SidebarProps) => {
 
     const pathname:string = useLocation().pathname;
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 
 
     const isRouteActive = (route:string) => {

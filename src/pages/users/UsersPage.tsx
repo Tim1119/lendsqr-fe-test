@@ -1,8 +1,14 @@
-import React from 'react'
+import UsersInfoCardRow from '../../components/cards/UsersInfoCardRow'
 
 const UsersPage = () => {
   return (
-    <div>UsersPage</div>
+   <div className='users-page' >
+      <h3 className='users-page__title'>Users</h3>
+
+      <UsersInfoCardRow />
+
+      
+   </div>
   )
 }
 

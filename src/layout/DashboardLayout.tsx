@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from '../components/dashboard/Navbar';
 import Sidebar from '../components/dashboard/Sidebar';
 import { useState } from 'react';
+import  '../styles/layout/dashboardLayout.scss'
 
 const DashboardLayout = () => {
 
@@ -12,10 +13,10 @@ const DashboardLayout = () => {
   };
 
   return (
-    <div className={`dashboard ${isSidebarOpen ? 'sidebar-open' : ''}`}>
+    <div className='dashboard__layout' >
     <Navbar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-    <div>
+    <div className='dashboard__content-container' >
       <Outlet />
     </div>
 
