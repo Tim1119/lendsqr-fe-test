@@ -36,7 +36,7 @@ function App() {
           element: <UsersPage />,
         },
         {
-          path: "users/:userId",
+          path: ":userId",
           element: <UserDetailPage />,
         },
       ],

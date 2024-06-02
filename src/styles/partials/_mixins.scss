@@ -84,7 +84,7 @@
 }
 
 @mixin pageTitle{
-    width: 66px;
+    width:fit-content;
     height: 28px;
     // top: 160px;
     // left: 343px;
@@ -94,6 +94,66 @@
     line-height: 28.15px;
     text-align: left;
     color:$blue;
+}
 
+@mixin small-button{
+    width: 170px;
+    height: 40px;
+    border-radius: 8px;
+    opacity: 0px;
+    font-family:$workSans;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.42px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin button-primary{
+    color:$turquoise;
+    border: 1px solid $turquoise;
+}
+
+@mixin button-danger{
+    color:$btn-danger;
+    border: 1px solid $btn-danger;
+}
+
+@mixin personalDetailHeader{
+    font-family:$workSans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.81px;
+    text-align: left;
+    color:$blue;
+
+    @include breakpointSmallScreen{
+        font-size: 16px;
+    }
+    @include breakpointMediumScreen{
+        font-size: 18px;
+    }
+
+    @include breakpointLargeScreen{
+      font-size: 20px;
+    }
+    @include breakpointExtraLargeScreen{
+        font-size: 22px;
+    }
+}
+
+@mixin personalDetailSubHeading{
+    font-family:$workSans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.42px;
+    text-align: left;
+    margin-top: 5px;
+    color:$blue;
+
+    @include breakpointMediumScreen{
+        font-size: 14px;
+    }
 
 }

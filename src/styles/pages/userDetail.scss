@@ -1,0 +1,59 @@
+@import '../base/colors.scss';
+@import '../base/typography.scss';
+@import '../partials/mixins';
+
+
+.userDetailsPage__back-page-icon{
+    display:flex;
+    align-items: center;
+    // background-color: red;
+    width: fit-content;
+    text-decoration: none;
+    gap:10px;
+    color:$slateblue;
+    text-decoration: none;
+    font-family:$workSans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.77px;
+    text-align: left;
+
+}
+.userDetailsPage__back-page-icon img{
+    width:30px;
+    height:30px;
+}
+
+.userDetailsPage__page-title{
+    @include pageTitle;
+}
+
+.userDetailsPage__activate-button{
+    @include small-button;
+    @include button-primary;
+}
+.userDetailsPage__blacklist-button{
+    @include small-button;
+    @include button-danger;
+}
+
+.userDetailsPage__header-container{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:20px 0px;
+    gap:20px;
+
+    @include breakpointMediumScreen{
+        flex-direction: row;
+        align-items: center;
+    }   
+
+    div{
+        display: flex;
+        align-items: center;
+        gap:20px;
+    }
+
+}
