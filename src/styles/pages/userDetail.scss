@@ -31,10 +31,16 @@
 .userDetailsPage__activate-button{
     @include small-button;
     @include button-primary;
+    &:hover{
+        cursor:pointer;
+    }
 }
 .userDetailsPage__blacklist-button{
     @include small-button;
     @include button-danger;
+    &:hover{
+        cursor:pointer;
+    }
 }
 
 .userDetailsPage__header-container{
@@ -57,3 +63,4 @@
     }
 
 }
+

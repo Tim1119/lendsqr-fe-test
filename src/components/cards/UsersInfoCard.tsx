@@ -1,4 +1,4 @@
-import '../../styles/components/users-info-card.scss'
+import '../../styles/components/cards/users-info-card.scss'
 interface UsersInfoCardProps{
     icon:string;
     title:string;

@@ -2,7 +2,7 @@
 import {SidebarNavigationData} from '../../utils/SidebarNavigation'
 import SidebarLink from './SidebarLink';
 import { useLocation, useNavigate } from 'react-router-dom';
-import '../../styles/components/sidebar.scss'
+import '../../styles/components/dashboard/sidebar.scss'
 import lendsqrLogo from '../../assets/images/logo.svg'
 import closeIcon from '../../assets/icons/navbar/close.svg'
 
@@ -39,7 +39,7 @@ const Sidebar = ({ isOpen, toggleSidebar }:SidebarProps) => {
       </div>
 
       {SidebarNavigationData.map((sidebarLinkData,index)=>(
-        <div> 
+        <div key={index}> 
          <SidebarLink 
             key={index} 
                 title={sidebarLinkData.title} 

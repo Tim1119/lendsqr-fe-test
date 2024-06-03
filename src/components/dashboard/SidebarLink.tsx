@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../../styles/components/sidebarLink.scss'
+import '../../styles/components/dashboard/sidebar-link.scss'
 
 interface SidebarLinkProps{
   title:string;

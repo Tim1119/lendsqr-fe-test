@@ -3,50 +3,46 @@ import userIcon from '../../assets/icons/pages/user.svg'
 import positiveRatingIcon from '../../assets/icons/pages/positive-rating.svg'
 import emptyRatingIcon from '../../assets/icons/pages/empty-rating.svg'
 import { useState } from 'react'
+import { User } from '../../types/user'
 
 interface UserDetailsHeaderInfo{
-    user:any;
+    user:User;
 }
 
 
 const UserDetailsHeaderInfo = ({user}:UserDetailsHeaderInfo) => {
-    const [userImage, setUserImage] = useState(null)
-    const [rating, setRating] = useState<number>(1)
+   
   return (
     <div className='userDetailsHeader' >
         <div className="userDetailsHeader__top-info">
             <div className='userDetailsHeader__profile-and-name-container'>
-                {userImage ? (
+                 
                 <div className="userDetailsHeader__profile-container" >
-                    <img src={userIcon} alt="user-icon" />
-                </div>):(
-
-                <div className="userDetailsHeader__default-profile-container" >
-                    <img src={userIcon} alt="user-icon" />
+                    <img src={user?.image} alt="user-icon" />
                 </div>
-                )}
                 <div className="userDetailsHeader__name-and-id" >
-                    <h3>Grace Effiom</h3>
-                    <p>LSQFf587g90</p>
+                    <h3>{user?.username}</h3>
+                    <p>{user?.id}</p>
                 </div>
             </div>
             <div className='userDetailsHeader__top-info-user-tier' >
                 <h4>User's Tier</h4>
 
                 <div className="userDetailsHeader__rating">
-                    {[...Array(rating)].map((_, index) => (
-                      <span><img key={index} src={positiveRatingIcon} alt="rating" /></span>  
+                    {[...Array(user?.userTier)].map((_, index) => (
+                      <span key={index}><img  src={positiveRatingIcon} alt="rating" /></span>  
                     ))}
-                    {[...Array(3-rating)].map((_, index) => (
-                       <span><img key={index} src={emptyRatingIcon} alt="empty-rating" /></span>
-                    ))}
+                    
+                 
+                       <span   ><img src={emptyRatingIcon} alt="empty-rating" /></span>
+                    
                 </div>
                 <p></p>
             </div>
             <div className="userDetailsHeader__top-info-bank-and-amount" >
                 <div>
-                <h3>₦200,000.00</h3>
-                <p>9912345678/Providus Bank</p>
+                <h3>₦{user?.monthlyIncome}</h3>
+                <p>{user?.bankAccount}/{user?.bank}</p>
                 </div>
             </div>
         </div>

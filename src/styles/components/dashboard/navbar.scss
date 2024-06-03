@@ -1,6 +1,6 @@
-@import '../base/colors.scss';
-@import '../base/typography.scss';
-@import '../partials/mixins';
+@import '../../base/colors.scss';
+@import '../../base/typography.scss';
+@import '../../partials/mixins';
 
 .navbar{
     height:100px;
@@ -79,7 +79,7 @@
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
         opacity: 0px;
-        border:1px solid $input-boder;
+        border:1px solid $input-border;
         outline:none;
         font-family:$workSans;
     

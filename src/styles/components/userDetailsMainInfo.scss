@@ -85,29 +85,6 @@
     div{
         background-color: green;
     }
-    // @include breakpointSmallScreen {
-    //     grid-template-columns: repeat(5, 1fr);
-        
-    //     div:nth-child(3) {
-    //         grid-column: span 2; /* Make "Email Address" span two columns */
-    //         background-color: red;
-    //     }
-    // }
-
-    // @include breakpointSmallScreen{
-    //     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    // }
-    
-    
-    // div:nth-child(3){
-    //     grid-column: span 2;
-    //     @include breakpointSmallScreen{
-    //         grid-column: span 0;
-
-    //         background-color: red;
-    //     }
-    // }
-    
   }
 
 
@@ -116,13 +93,20 @@
     // background-color: red;
     // justify-content: space-between;
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr 1fr   ;
+    grid-template-columns: 1fr   ;
     justify-content: space-between;
-    background-color: yellow;
+    // background-color: yellow;
+
+     @include breakpointSmallScreen{
+        grid-template-columns: 1fr 1.5fr    ;
+    }
+     @include breakpointLargeScreen{
+        grid-template-columns: 1fr 1.5fr 1fr 1fr   ;
+    }
   }
 
   .userDetailMain .userDetailMain__card:nth-child(2) .userDetailMain__info div:nth-child(6){
-    background-color: teal;
+    // background-color: teal;
   }
 // .userDetailMain .userDetailMain__card .userDetailMain__info:nth-child(2) {
 

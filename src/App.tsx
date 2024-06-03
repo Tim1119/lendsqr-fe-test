@@ -29,7 +29,7 @@ function App() {
     {
       path: "/dashboard/users",
       element: <DashboardLayout />,
-      errorElement: <ErrorPage />,
+      // errorElement: <ErrorPage />,
       children: [
         {
           path: "",

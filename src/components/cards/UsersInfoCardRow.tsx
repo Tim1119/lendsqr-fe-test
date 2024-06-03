@@ -1,4 +1,4 @@
-import '../../styles/components/users-info-card-row.scss'
+import '../../styles/components/cards/users-info-card-row.scss'
 import UsersInfoCard from "./UsersInfoCard"
 import { usersInformationCardData } from "../../utils/UsersInformationCardData"
 

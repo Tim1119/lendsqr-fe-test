@@ -70,7 +70,7 @@ const UserDetailsMainInfo = ({user}:UserDetailsMainInfoProps) => {
 					</div>
 					<div>
 						<p>Monthly income</p>
-						<p>{`₦${user?.monthlyIncomeRange}`}</p>
+						<p>{`${user?.monthlyIncomeRange}`}</p>
 					</div>
 					<div>
 						<p>loan repayment</p>

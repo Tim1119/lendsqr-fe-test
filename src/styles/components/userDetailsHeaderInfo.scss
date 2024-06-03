@@ -45,11 +45,10 @@
     height: 70%;
     flex:0.4;
 
-    .userDetailsHeader__profile-container{
+    .userDetailsHeader__profile-container img{
 
         width: 50px;
         height: 50px;
-        background-color: red;
        border: none;
        border-radius: 50%;
        object-fit: cover;

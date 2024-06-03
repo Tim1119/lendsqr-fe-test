@@ -1,4 +1,4 @@
-import '../../styles/components/navbar.scss'
+import '../../styles/components/dashboard/navbar.scss'
 import lendsqrLogo from '../../assets/images/logo.svg'
 import searchIcon from '../../assets/icons/navbar/search.svg'
 import bellIcon from '../../assets/icons/navbar/bell.svg'
