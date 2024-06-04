@@ -11,8 +11,8 @@ import './App.scss'
 function App() {
 
   const LoginPage = lazy(() => import("./pages/LoginPage"));
-  const UsersPage = lazy(() => import("./pages/users/UsersPage"));
-  const UserDetailPage = lazy(() => import("./pages/users/UserDetailPage"));
+  const UsersPage = lazy(() => import("./pages/user/UsersPage"));
+  const UserDetailPage = lazy(() => import("./pages/user/UserDetailPage"));
 
 
   const router = createBrowserRouter([

@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom'
 import arrowLeft from '../../assets/icons/pages/arrow-left.svg'
 import '../../styles/pages/userDetail.scss'
-import UserDetailsHeaderInfo from '../../components/user/UserDetailsHeader'
-import dummyUser from '../../utils/dummy'
-import UserDetailsMainInfo from '../../components/user/UserDetailsMainInfo'
+import UserDetailsHeader from '../../components/user/UserDetailsHeader'
+import UserDetailsMain from '../../components/user/UserDetailsMain'
 import { useParams } from 'react-router-dom';
 import { useState,useEffect } from 'react'
 import axios from 'axios'
 import { User } from '../../types/user'
-import PageLoader from '../../components/loaders/Loader'
+import PageLoader from '../../components/loaders/PageLoader'
 
 
 
@@ -29,13 +28,10 @@ const UserDetailPage = () => {
       try {
         // Check if user data is already in localStorage
         const cachedUser = localStorage.getItem(`user-${userId}`);
-       
-
         if (cachedUser) {
           // Use cached user data if available
           setUser(JSON.parse(cachedUser));
-        } else {
-          
+        } else {  
           // Fetch user details from API if not stored in local Storage 
           const response = await axios.get<User>(`${import.meta.env.VITE_MOCK_API_GENERATOR_URL}/users/${userId}`);
           setUser(response.data);
@@ -53,27 +49,26 @@ const UserDetailPage = () => {
   }, [userId]); // Run useEffect only when userId changes
 
   return (
-    <div className='userDetailsPage' >
-      <Link className='userDetailsPage__back-page-icon' to="/dashboard/users" ><img src={arrowLeft} alt="arrow-left" /><span  >Back to Users</span></Link>
-      <div className='userDetailsPage__header-container' >
-        <h3 className='userDetailsPage__page-title'> User Details</h3>
+    <div className='users-detail-page' >
+      <Link className='users-detail-page__back-page-icon' to="/dashboard/users" ><img src={arrowLeft} alt="arrow-left" /><span  >Back to Users</span></Link>
+      <div className='users-detail-page__header-container' >
+        <h3 className='users-detail-page__page-title'> User Details</h3>
         <div>
-          <button className='userDetailsPage__blacklist-button' >Blacklist User</button>
-          <button className='userDetailsPage__activate-button'>Activate User</button>
+          <button className='users-detail-page__blacklist-button' >Blacklist User</button>
+          <button className='users-detail-page__activate-button'>Activate User</button>
         </div>
       </div>
       {isLoading ? <PageLoader /> : (
         
         
-      <> 
-      {user && (
-
-      <UserDetailsHeaderInfo user={user} />
-      <UserDetailsMainInfo user={user} />
-      )}
-      
- 
-      </>
+      <div> 
+        {user && (
+          <> 
+          <UserDetailsHeader user={user} />
+          <UserDetailsMain user={user} />
+          </>
+        )}
+      </div>
        
       )}
     </div>

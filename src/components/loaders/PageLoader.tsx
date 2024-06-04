@@ -1,7 +1,7 @@
 import { RotatingLines } from 'react-loader-spinner'
 
 const PageLoader = () => (
-        <div>
+        <div style={{display:"grid",placeItems:"center"}} >
             <RotatingLines
             visible={true}
             height="80"

@@ -1,8 +1,8 @@
-@import '../base/colors.scss';
-@import '../base/typography.scss';
-@import '../partials/mixins';
+@import '../../base/colors.scss';
+@import '../../base/typography.scss';
+@import '../../partials/mixins';
 
-.userDetailsHeader{
+.user-details-header{
     height:210px;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
 }
 
 
-.userDetailsHeader__top-info{
+.user-details-header__top-info{
     display:flex;
     align-items: center;
     height:140px;
@@ -37,7 +37,7 @@
     }
 }
 
-.userDetailsHeader__profile-and-name-container{
+.user-details-header__profile-and-name-container{
     display: flex;
     gap:20px;
     align-items: center;
@@ -45,7 +45,7 @@
     height: 70%;
     flex:0.4;
 
-    .userDetailsHeader__profile-container img{
+    .user-details-header__profile-container img{
 
         width: 50px;
         height: 50px;
@@ -65,7 +65,7 @@
         }
     }
 
-.userDetailsHeader__default-profile-container{
+.user-details-header__default-profile-container{
 
     width: 60px;
     height: 60px;
@@ -88,7 +88,7 @@
     }
 }
 
-.userDetailsHeader__name-and-id{
+.user-details-header__name-and-id{
     h3{
         @include  personalDetailHeader;
     }
@@ -97,7 +97,7 @@
     }
 }
 
-.userDetailsHeader__top-info-user-tier{
+.user-details-header__top-info-user-tier{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,7 +116,7 @@
         color:$slateblue;
     }
 
-    .userDetailsHeader__rating{
+    .user-details-header__rating{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -125,7 +125,7 @@
     }
 }
 
-.userDetailsHeader__top-info-bank-and-amount{
+.user-details-header__top-info-bank-and-amount{
 
     display: flex;
     flex-direction: column;
@@ -142,7 +142,7 @@
     }
 }
 
-.userDetailsHeader__Bottom-Info{
+.user-details-header__Bottom-Info{
     display:flex;
     align-items: center;
     justify-content: space-between;

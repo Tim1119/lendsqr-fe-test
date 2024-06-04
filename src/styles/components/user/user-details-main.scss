@@ -1,8 +1,8 @@
-@import '../base/colors.scss';
-@import '../base/typography.scss';
-@import '../partials/mixins';
+@import '../../base/colors.scss';
+@import '../../base/typography.scss';
+@import '../../partials/mixins';
 
-.userDetailMain {
+.user-details-main {
     background-color:$white;
     border: 1px solid rgba(33, 63, 125, 0.06);
     box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
@@ -11,7 +11,7 @@
     margin-top: 30px;
     font-family:$workSans;
 
-    .userDetailMain__card {
+    .user-details-main__card {
         border-bottom: 1px solid #21407d5a;
         &:last-child {
             border-bottom: none;
@@ -28,19 +28,13 @@
             font-family:$workSans;
 
         }
-        .userDetailMain__info{
+        .user-details-main__info{
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
-            // display: grid;
-            
-            // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-           
-            // background-color: green;
             div {
                 margin-right: 2%;
                 min-width: 120px;
-                // background-color: red;
             }
         }
         
@@ -53,6 +47,7 @@
                 font-weight: 400;
                 line-height: 14.08px;
                 color:$slateblue;
+                text-wrap:wrap;
             }
             &:last-child {
                 font-size: 16px;
@@ -60,42 +55,25 @@
                 line-height:18.77px;
                 color:$slateblue;
                 text-transform: capitalize;
+                text-wrap:wrap;
             }
         }
         
-    }
-
-    
+    }    
 }
 
-
-.userDetailMain .userDetailMain__card:nth-child(1) .userDetailMain__info {
-    /* Styles for the first element */
-    // background-color: red;
-    // justify-content: space-between;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // justify-content: space-between;
+.user-details-main .user-details-main__card:nth-child(1) .user-details-main__info {
 
     display: flex;
     align-items: center;
-    background-color: red;
-    flex-basis: 1 1 1 1 1;
-
-    div{
-        background-color: green;
-    }
+    flex-basis: 1 1 1 1 1;    
   }
 
 
-.userDetailMain .userDetailMain__card:nth-child(2) .userDetailMain__info {
-    /* Styles for the first element */
-    // background-color: red;
-    // justify-content: space-between;
+.user-details-main .user-details-main__card:nth-child(2) .user-details-main__info {
     display: grid;
     grid-template-columns: 1fr   ;
     justify-content: space-between;
-    // background-color: yellow;
 
      @include breakpointSmallScreen{
         grid-template-columns: 1fr 1.5fr    ;
@@ -105,17 +83,4 @@
     }
   }
 
-  .userDetailMain .userDetailMain__card:nth-child(2) .userDetailMain__info div:nth-child(6){
-    // background-color: teal;
-  }
-// .userDetailMain .userDetailMain__card .userDetailMain__info:nth-child(2) {
 
-//     display: grid;
-            
-//             grid-template-columns: 1fr 1fr 1fr 1fr ;
-           
-//   }
-
-//   .userDetailMain .userDetailMain__card p:last-child {
-//     background-color: red;
-// } 

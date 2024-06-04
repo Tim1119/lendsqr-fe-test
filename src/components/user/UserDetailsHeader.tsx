@@ -1,4 +1,4 @@
-import '../../styles/components/userDetailsHeaderInfo.scss'
+import '../../styles/components/user/user-details-header.scss'
 import positiveRatingIcon from '../../assets/icons/pages/positive-rating.svg'
 import emptyRatingIcon from '../../assets/icons/pages/empty-rating.svg'
 import { User } from '../../types/user'
@@ -11,22 +11,22 @@ interface UserDetailsHeader{
 const UserDetailsHeader = ({user}:UserDetailsHeader) => {
    
   return (
-    <div className='userDetailsHeader' >
-        <div className="userDetailsHeader__top-info">
-            <div className='userDetailsHeader__profile-and-name-container'>
+    <div className='user-details-header' >
+        <div className="user-details-header__top-info">
+            <div className='user-details-header__profile-and-name-container'>
                  
-                <div className="userDetailsHeader__profile-container" >
+                <div className="user-details-header__profile-container" >
                     <img src={user?.image} alt="user-icon" />
                 </div>
-                <div className="userDetailsHeader__name-and-id" >
+                <div className="user-details-header__name-and-id" >
                     <h3>{user?.username}</h3>
                     <p>{user?.id}</p>
                 </div>
             </div>
-            <div className='userDetailsHeader__top-info-user-tier' >
+            <div className='user-details-header__top-info-user-tier' >
                 <h4>User's Tier</h4>
 
-                <div className="userDetailsHeader__rating">
+                <div className="user-details-header__rating">
                     {[...Array(user?.userTier)].map((_, index) => (
                       <span key={index}><img  src={positiveRatingIcon} alt="rating" /></span>  
                     ))}
@@ -35,14 +35,14 @@ const UserDetailsHeader = ({user}:UserDetailsHeader) => {
                 </div>
                 <p></p>
             </div>
-            <div className="userDetailsHeader__top-info-bank-and-amount" >
+            <div className="user-details-header__top-info-bank-and-amount" >
                 <div>
                 <h3>₦{user?.monthlyIncome}</h3>
                 <p>{user?.bankAccount}/{user?.bank}</p>
                 </div>
             </div>
         </div>
-        <div className="userDetailsHeader__Bottom-Info" >
+        <div className="user-details-header__Bottom-Info" >
             <div >
                 <li>General Details</li>
             </div>

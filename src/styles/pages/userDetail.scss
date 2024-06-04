@@ -3,7 +3,7 @@
 @import '../partials/mixins';
 
 
-.userDetailsPage__back-page-icon{
+.users-detail-page__back-page-icon{
     display:flex;
     align-items: center;
     // background-color: red;
@@ -19,23 +19,23 @@
     text-align: left;
 
 }
-.userDetailsPage__back-page-icon img{
+.users-detail-page__back-page-icon img{
     width:30px;
     height:30px;
 }
 
-.userDetailsPage__page-title{
+.users-detail-page__page-title{
     @include pageTitle;
 }
 
-.userDetailsPage__activate-button{
+.users-detail-page__activate-button{
     @include small-button;
     @include button-primary;
     &:hover{
         cursor:pointer;
     }
 }
-.userDetailsPage__blacklist-button{
+.users-detail-page__blacklist-button{
     @include small-button;
     @include button-danger;
     &:hover{
@@ -43,7 +43,7 @@
     }
 }
 
-.userDetailsPage__header-container{
+.users-detail-page__header-container{
     display: flex;
     align-content: center;
     flex-direction: column;
