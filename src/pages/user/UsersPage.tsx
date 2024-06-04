@@ -94,7 +94,7 @@ const UsersPage = () => {
 						</div>
 					</>
 				)}		
-				{isError && <h5 className='users-page__error' >Error Fectching Users Data</h5> }
+				{isError && <h5 className='users-page__error' >Error Fetching Users Data</h5> }
    </div>
   )
 }

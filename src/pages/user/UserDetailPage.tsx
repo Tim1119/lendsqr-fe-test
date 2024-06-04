@@ -39,6 +39,7 @@ const UserDetailPage = () => {
           
         }
       } catch (error) {
+        console.log('error',error)
         setError('Failed to fetch user details.');
       } finally {
         setIsLoading(false);
@@ -46,7 +47,7 @@ const UserDetailPage = () => {
     };
 
     fetchUserData();
-  }, [userId]); // Run useEffect only when userId changes
+  }, [userId]); 
 
   return (
     <div className='users-detail-page' >
@@ -68,7 +69,7 @@ const UserDetailPage = () => {
           <UserDetailsMain user={user} />
           </>
         )}
-        {isError && <h3 className='user-detail-page__error' >Error Fectching User Details</h3> }
+        {isError && <h3 className='user-detail-page__error' >Error Fetching User Details</h3> }
       </div>
        
       )}
