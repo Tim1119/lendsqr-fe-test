@@ -7,8 +7,8 @@ LendSqr is a Lending-as-a-service company (LAAS) based in Lagos, Nigeria. Lendsq
 At Lendsqr, many of our lenders use web apps to reach over half a million customers. At this scale, we use React with TypeScript and SCSS as its frontend software development stack which allows us to rapidly ideate and release features rapidly and reliably.
 
 ## Project Overview 
-This project was completed as the assessment test for the role of Frontend Engineer at Lendsqr
-The aim of the assessment is to replicate a mirror image of the figma design below using react, typescript and scss while fetching data from mock api endpoints and ensuring the application is responsive.
+This project was completed as the assessment test for the role of Frontend Engineer at Lendsqr.
+The aim of the assessment is to replicate a mirror image of the figma design below using react, typescript and scss, fetching users data from mock api endpoints and ensuring the application is responsive.
 
 --> Figma Link: 
 https://www.figma.com/design/ZKILoCoIoy1IESdBpq3GNC/Lendsqr-Frontend-Engineering-Assessment?node-id=5530-0&t=Cj3DPxLzOOklPnrT-0 
@@ -37,7 +37,7 @@ Others Include
 ## How to Install / Run Project
 For development, you will only need Node.js installed on your PC.
 
-[Node](http://nodejs.org/) is really easy to install .It also has a package manager include [NPM](https://npmjs.org/).
+[Node](http://nodejs.org/) is really easy to install .It also has a package manager  [NPM](https://npmjs.org/).
 
 
 ## Install Project
