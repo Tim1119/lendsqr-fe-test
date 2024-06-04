@@ -15,6 +15,7 @@ const UsersPage = () => {
 	const [currentItems, setCurrentItems] = useState([]);
 	const [pageCount, setPageCount] = useState(0);
 	const [itemOffset, setItemOffset] = useState(0);
+	const [isError, setError] = useState<string | null>(null);
 	const itemsPerPage = 9;
 
 	// Used to show other users not on current page 
@@ -35,6 +36,7 @@ const UsersPage = () => {
 				const err = error.response.data;
 				console.log(err);
 				setLoading(false);
+				setError("Failed to fetch user details.");
 			});
 	};
 
@@ -91,7 +93,8 @@ const UsersPage = () => {
 							/>
 						</div>
 					</>
-				)}
+				)}		
+				{isError && <h5 className='users-page__error' >Error Fectching Users Data</h5> }
    </div>
   )
 }

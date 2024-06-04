@@ -35,7 +35,7 @@ const Navbar = ({ isOpen, toggleSidebar }:NavbarProps) => {
             </button>
         </div>
         <div className="navbar__right-container" >
-            <Link className='navbar__docs-link' to="/">Docs</Link>
+            <div className='navbar__docs-link'>Docs</div>
             <div className="navbar__notification" >
                 <img src={bellIcon} alt="notification-icon" />
             </div>

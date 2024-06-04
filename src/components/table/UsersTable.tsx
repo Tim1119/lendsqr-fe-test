@@ -49,7 +49,9 @@ const UsersTable = ({users}:UserTableProps) => {
 								<td>
 									<Link to={`/dashboard/users/${user?.id}`}>{user?.organisation}</Link>
 								</td>
-								<td>{user?.username}</td>
+								<td>
+								<Link to={`/dashboard/users/${user?.id}`}>{user?.username}</Link>
+								</td>
 								<td>{user?.userEmail}</td>
 								<td>0{user?.phoneNumber}</td>
 								<td>{user?.dateJoined}</td>

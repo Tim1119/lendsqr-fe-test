@@ -17,7 +17,7 @@ const SidebarLink = ({title,icon,link,toggleIcon,id,header,isActive}:SidebarLink
     
     {!header ? (
 
-    <Link to={link} className={`sidebarlink ${isActive && "sidebarlink--active"} ${!isActive && "sidebarlink--hover"} ${id < 3 && "sidebarlink--bigger"} `}>
+    <Link to={link} className={`sidebarlink ${isActive && "sidebarlink--active"} ${!isActive && "sidebarlink--hover"} ${id < 3 && "sidebarlink--bigger"} ${id===26 && 'border--top'}`}>
       {icon &&
         <span className="sidebarlink__icon-container" >
          <img className="sidebarlink__icon" src={icon} alt={`${title}-icon`} />

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import arrowLeft from '../../assets/icons/pages/arrow-left.svg'
-import '../../styles/pages/userDetail.scss'
+import '../../styles/pages/user-detail.scss'
 import UserDetailsHeader from '../../components/user/UserDetailsHeader'
 import UserDetailsMain from '../../components/user/UserDetailsMain'
 import { useParams } from 'react-router-dom';
@@ -16,7 +16,7 @@ const UserDetailPage = () => {
   const { userId } = useParams(); // Get userId from route param
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [isError, setError] = useState<string | null>(null);
 
   console.log('userId',userId)
 
@@ -68,6 +68,7 @@ const UserDetailPage = () => {
           <UserDetailsMain user={user} />
           </>
         )}
+        {isError && <h3 className='user-detail-page__error' >Error Fectching User Details</h3> }
       </div>
        
       )}

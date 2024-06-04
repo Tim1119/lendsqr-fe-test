@@ -4,8 +4,6 @@
 @mixin input-mixin($type) {
     margin:20px 0px;
     
-
-
     input[type="#{$type}"] {
         width: 100%;
         border:2px;
@@ -30,7 +28,6 @@
         &:focus{
             border-color: $turquoise; // This changes the border color on focus
             outline: none;
-            // border-color: $turquoise
         }
     }
 }
@@ -86,8 +83,6 @@
 @mixin pageTitle{
     width:fit-content;
     height: 28px;
-    // top: 160px;
-    // left: 343px;
     font-family:$workSans;
     font-size: 24px;
     font-weight: 500;

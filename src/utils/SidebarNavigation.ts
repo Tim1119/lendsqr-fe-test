@@ -19,6 +19,7 @@ import preferencesIcon from  '../assets/icons/sidebar/preferences.svg'
 import feesAndPricingIcon from  '../assets/icons/sidebar/fees-and-pricing.svg'
 import auditLogsIcon from  '../assets/icons/sidebar/audit-logs.svg'
 import chevronIcon from  '../assets/icons/sidebar/chevron.svg'
+import logoutIcon from  '../assets/icons/sidebar/logout-icon.svg'
 
 
 
@@ -175,5 +176,11 @@ export const SidebarNavigationData = [
 		icon: auditLogsIcon,
 		link: '/audit-logs',
 		id: 25,
+	},
+	{
+		title: 'Logout',
+		icon:logoutIcon,
+		link: '/login',
+		id: 26,
 	},
 ]
