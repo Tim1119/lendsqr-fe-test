@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 import { useState,useEffect } from 'react'
 import axios from 'axios'
 import { User } from '../../types/user'
-import Loader from '../../components/Loader'
+import PageLoader from '../../components/loaders/Loader'
 
 
 
@@ -65,7 +65,7 @@ const UserDetailPage = () => {
           <button className='userDetailsPage__activate-button'>Activate User</button>
         </div>
       </div>
-      {isLoading ? <Loader /> : (
+      {isLoading ? <PageLoader /> : (
         
         
       <> 

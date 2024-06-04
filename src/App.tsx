@@ -1,6 +1,6 @@
 import {lazy,Suspense} from 'react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Loader from './components/Loader';
+import  PageLoader from './components/loaders/PageLoader';
 import ErrorPage from './pages/error/ErrorPage';
 import DashboardLayout from './layout/DashboardLayout';
 import ErrorBoundary from './components/errors/ErrorBoundary';
@@ -50,7 +50,7 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<PageLoader />}>
         <RouterProvider router={router} />
       </Suspense>
     </ErrorBoundary>

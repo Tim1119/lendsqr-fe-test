@@ -25,7 +25,7 @@ const LoginForm = () => {
       setTimeout(() => {
         setLoading(false);
         navigate('/dashboard/users');
-      }, 20000); // Simulate the 2-second loading time
+      }, 2000); // Simulate the 2-second loading time
     };
 
  

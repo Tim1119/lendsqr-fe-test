@@ -17,7 +17,7 @@ const LoginPage = () => {
         </section>
         <section className='login-page__right-container' >
 
-          <img className='test' src={lendsqrLogo} alt="logo for small screens" />
+          <img src={lendsqrLogo} alt="logo for small screens" />
 
           <div className='login-page__form-container' >
            <h3 >Welcome!</h3>
