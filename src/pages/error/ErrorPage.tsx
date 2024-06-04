@@ -3,8 +3,6 @@ import '../../styles/pages/error-page.scss'
 
 const ErrorPage = () => {
   return (
-   
-
     <div className="error">
     <div className="error__content">
       <h1>Oops</h1>

@@ -1,30 +1,58 @@
-# React + TypeScript + Vite
+# Lendsqr Frontend Engineer Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About Lendsqr
+LendSqr is a Lending-as-a-service company (LAAS) based in Lagos, Nigeria. Lendsqr is on a mission to help everyone get the loan that they need to get a better life.It does this by simplifying the lending process using easy but sophisticated technology that can guarantee an awesome loan experience for both the lender and the borrower. 
 
-Currently, two official plugins are available:
+## Project Background 
+At Lendsqr, many of our lenders use web apps to reach over half a million customers. At this scale, we use React with TypeScript and SCSS as its frontend software development stack which allows us to rapidly ideate and release features rapidly and reliably.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview 
+This project was completed as the assessment test for the role of Frontend Engineer at Lendsqr
+The aim of the assessment is to replicate a mirror image of the figma design below using react, typescript and scss while fetching data from mock api endpoints and ensuring the application is responsive.
 
-## Expanding the ESLint configuration
+--> Figma Link: 
+https://www.figma.com/design/ZKILoCoIoy1IESdBpq3GNC/Lendsqr-Frontend-Engineering-Assessment?node-id=5530-0&t=Cj3DPxLzOOklPnrT-0 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+--> Mock api endpoints
 
-- Configure the top-level `parserOptions` property like this:
+To fetch all users 
+https://pewter-feather-airbus.glitch.me/
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+to fetch a single user
+https://pewter-feather-airbus.glitch.me/users/{userId}
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Technologies / Libraries / Tools Used
+Required
+1. React
+2. Typescript
+3. SCSS
+4. Jest
+
+Others Include
+5. React Loader Spinner
+6. React Hook Form
+7. React Paginate
+8. Axios
+
+## How to Install / Run Project
+For development, you will only need Node.js installed on your PC.
+
+[Node](http://nodejs.org/) is really easy to install .It also has a package manager include [NPM](https://npmjs.org/).
+
+
+## Install Project
+
+    $ git clone https://github.com/Tim1119/lendsqr-fe-test.git
+    $ cd lendsqr-fe-test
+    $ npm install
+
+
+## Start Project
+
+    $ npm run dev
+
+To start project in development mode 
+
+## Build Project for production
+
+    $ npm run build
