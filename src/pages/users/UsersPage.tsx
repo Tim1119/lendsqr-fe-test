@@ -1,7 +1,7 @@
 import UsersInfoCardRow from '../../components/cards/UsersInfoCardRow'
 import ReactPaginate from 'react-paginate';
 import axios from 'axios';
-import UsersTable from '../../components/user/UsersTable';
+import UsersTable from '../../components/table/UsersTable';
 import { useEffect, useState } from 'react';
 import downArrowIcon from '../../assets/icons/pages/down-arrow.svg'
 import usersData from '../../utils/users-data.json'

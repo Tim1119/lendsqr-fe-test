@@ -5,7 +5,7 @@ import { User } from '../../types/user';
 import moreIcon from '../../assets/icons/pages/more-icon.svg'
 import FilterUsersTableForm from './FilterUsersForm';
 import '../../styles/components/table/users-table.scss'
-import OptionsDropDown from '../table/OptionsDropdown';
+import OptionsDropDown from './OptionsDropdown';
 
 interface UserTableProps{
 	users:User[]

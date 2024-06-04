@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import arrowLeft from '../../assets/icons/pages/arrow-left.svg'
 import '../../styles/pages/userDetail.scss'
-import UserDetailsHeaderInfo from '../../components/user/UserDetailsHeaderInfo'
+import UserDetailsHeaderInfo from '../../components/user/UserDetailsHeader'
 import dummyUser from '../../utils/dummy'
 import UserDetailsMainInfo from '../../components/user/UserDetailsMainInfo'
 import { useParams } from 'react-router-dom';

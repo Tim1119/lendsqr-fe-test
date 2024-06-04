@@ -1,15 +1,29 @@
 import '../../styles/components/form/filter-form.scss'
-import { useForm } from 'react-hook-form';
+import { useForm,SubmitHandler } from 'react-hook-form';
+
+
+interface FiterUserFormData {
+	organization: string;
+	username: string;
+	email: string;
+	date: string;
+	phone_number: string;
+	status: boolean;
+  }
+
 
 const FilterUsersForm = () => {
 
-  const {register,reset,handleSubmit,formState: { errors },} = useForm({	mode: 'all',});
+	const { register,reset, handleSubmit } = useForm<FiterUserFormData>();
 
-  const onSubmit = (data: any) => {
-		if (data) {
-			// console.log(data);
+	const onSubmit: SubmitHandler<FiterUserFormData> = (_data) => {
+		if (_data) {
+			console.log(_data);
 		}
 	};
+  
+
+
 
   return (
     <form className="filter-form" onSubmit={handleSubmit(onSubmit)}>
@@ -58,7 +72,7 @@ const FilterUsersForm = () => {
 				<input
 					type="tel"
                     placeholder='Phone Number'
-					{...register('phone', {
+					{...register('phone_number', {
 						required: false,
 					})}
 				/>
@@ -74,7 +88,7 @@ const FilterUsersForm = () => {
 				</select>
 			</div>
 			<div>
-				<button type="reset">Reset</button>
+				<button onClick={()=>reset()} type="reset">Reset</button>
 				<button type="submit">Filter</button>
 			</div>
 		</form>

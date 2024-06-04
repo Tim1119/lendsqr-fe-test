@@ -1,16 +1,14 @@
 import '../../styles/components/userDetailsHeaderInfo.scss'
-import userIcon from '../../assets/icons/pages/user.svg'
 import positiveRatingIcon from '../../assets/icons/pages/positive-rating.svg'
 import emptyRatingIcon from '../../assets/icons/pages/empty-rating.svg'
-import { useState } from 'react'
 import { User } from '../../types/user'
 
-interface UserDetailsHeaderInfo{
+interface UserDetailsHeader{
     user:User;
 }
 
 
-const UserDetailsHeaderInfo = ({user}:UserDetailsHeaderInfo) => {
+const UserDetailsHeader = ({user}:UserDetailsHeader) => {
    
   return (
     <div className='userDetailsHeader' >
@@ -32,9 +30,7 @@ const UserDetailsHeaderInfo = ({user}:UserDetailsHeaderInfo) => {
                     {[...Array(user?.userTier)].map((_, index) => (
                       <span key={index}><img  src={positiveRatingIcon} alt="rating" /></span>  
                     ))}
-                    
-                 
-                       <span   ><img src={emptyRatingIcon} alt="empty-rating" /></span>
+                    <span   ><img src={emptyRatingIcon} alt="empty-rating" /></span>
                     
                 </div>
                 <p></p>
@@ -70,4 +66,4 @@ const UserDetailsHeaderInfo = ({user}:UserDetailsHeaderInfo) => {
   )
 }
 
-export default UserDetailsHeaderInfo
+export default UserDetailsHeader

@@ -22,7 +22,6 @@ const LoginPage = () => {
           <div className='login-page__form-container' >
            <h3 >Welcome!</h3>
             <p >Enter details to login.</p>
-          
             <LoginForm />
           </div>
         </section>

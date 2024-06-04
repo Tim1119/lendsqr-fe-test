@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
+import ThreeDotLoader from "../loaders/ThreeDotLoader";
 
 interface LoginFormData {
   email: string;
@@ -10,7 +11,7 @@ interface LoginFormData {
 const LoginForm = () => {
   
     const [showPassword,setShowPassword] =useState(false)
-    const [loading, setLoading] = useState(false);
+    const [isLoading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     const { register, handleSubmit, formState: { errors } } = useForm<LoginFormData>();
@@ -23,8 +24,8 @@ const LoginForm = () => {
       // Simulate a login request
       setTimeout(() => {
         setLoading(false);
-        navigate('/dashboard');
-      }, 2000); // Simulate the 2-second loading time
+        navigate('/dashboard/users');
+      }, 20000); // Simulate the 2-second loading time
     };
 
  
@@ -48,7 +49,7 @@ const LoginForm = () => {
             {errors.password && <span className="login-form__error-message" >Password is required</span>}
         </div>
         <small >FORGOT PASSWORD ?</small>
-        <button  className="login-form__button" >LOG IN</button>
+        <button disabled={isLoading} >{isLoading ? "LOADING" : "LOG IN"} {isLoading && <ThreeDotLoader /> }</button>
        
     </form>
   )

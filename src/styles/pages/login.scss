@@ -40,10 +40,6 @@
     }
 }
 
-// .login-page__illustration-container{
-    
-// }
-
 .login-page__illustration{
     padding:10px;
     width:100%;
@@ -89,9 +85,12 @@
         font-size: 28px;
         line-height: 54px;
         color:$blue; 
+        margin-top:30px;
 
         @include breakpointMediumScreen{
             font-size: 34px;
+            margin-top:0px;
+           
         }
         @include breakpointLargeScreen{
             font-size: 38px;
@@ -104,23 +103,24 @@
     p{
         font-family: $avenirNext;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 27.32px;
         text-decoration: none;
         color:$slateblue;
         font-style: normal;
         text-align: left;
         margin-bottom:50px;
+
+        @include breakpointMediumScreen{
+            font-size: 20px;
+        }
     }
 }
-
-
 
 form{
     width: 100%;
     margin: 0px auto;
     
-     
     .login-form__input-container{
         @include input-mixin('email');
         @include input-mixin('password');
@@ -163,7 +163,11 @@ form{
     }
 
     button{
-       @include form-button
+       @include form-button;
+       display:flex;
+       gap:20px;
+       align-items:center;
+       justify-content:center;
     }
 
     .login-form__error-message{
@@ -172,8 +176,4 @@ form{
 		font-size: 14px;
         margin-top:5px;
     }
-
-    
-
-  
 }

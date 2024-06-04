@@ -1,10 +1,11 @@
-import "../../styles/components/userDetailsMainInfo.scss"
+import "../../styles/components/userDetailsMain.scss"
+import { User } from "../../types/user";
 
-interface UserDetailsMainInfoProps{
-    user:any;
+interface UserDetailsMainProps{
+    user:User;
 }
 
-const UserDetailsMainInfo = ({user}:UserDetailsMainInfoProps) => {
+const UserDetailsMain = ({user}:UserDetailsMainProps) => {
   return (
     <div className="userDetailMain">
 			<div className="userDetailMain__card">
@@ -12,7 +13,7 @@ const UserDetailsMainInfo = ({user}:UserDetailsMainInfoProps) => {
 				<div className="userDetailMain__info">
 					<div>
 						<p>Full Name</p>
-						<p>{`${user?.fullName}`}</p>
+						<p>{`${user?.username}`}</p>
 					</div>
 					<div>
 						<p>Phone Number</p>
@@ -20,7 +21,7 @@ const UserDetailsMainInfo = ({user}:UserDetailsMainInfoProps) => {
 					</div>
 					<div>
 						<p>Email Address</p>
-						<p>{user?.email}</p>
+						<p>{user?.userEmail}</p>
 					</div>
 					<div>
 						<p>Bvn</p>
@@ -101,8 +102,8 @@ const UserDetailsMainInfo = ({user}:UserDetailsMainInfoProps) => {
 				<h2>Guarantor</h2>
 				<div className="userDetailMain__info">
 					<div>
-						<p>full Name</p>
-						<p>{`${user?.guarantorFullName} ${user?.guarantor?.lastName}`}</p>
+						<p>Full Name</p>
+						<p>{`${user?.guarantorFullName}`}</p>
 					</div>
 					<div>
 						<p>Phone Number</p>
@@ -122,4 +123,4 @@ const UserDetailsMainInfo = ({user}:UserDetailsMainInfoProps) => {
   )
 }
 
-export default UserDetailsMainInfo
+export default UserDetailsMain
