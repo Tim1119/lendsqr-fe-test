@@ -29,21 +29,18 @@ const UserDetailPage = () => {
       try {
         // Check if user data is already in localStorage
         const cachedUser = localStorage.getItem(`user-${userId}`);
-        console.log('hahahahah','Local storage')
+       
 
         if (cachedUser) {
           // Use cached user data if available
           setUser(JSON.parse(cachedUser));
         } else {
-          console.log('hahahahah','Fetched User')
-          // Fetch user details from API if not cached
+          
+          // Fetch user details from API if not stored in local Storage 
           const response = await axios.get<User>(`${import.meta.env.VITE_MOCK_API_GENERATOR_URL}/users/${userId}`);
-         
           setUser(response.data);
-
-          // // Store fetched user data in localStorage for future use
           localStorage.setItem(`user-${userId}`, JSON.stringify(response.data));
-          console.log(response)
+          
         }
       } catch (error) {
         setError('Failed to fetch user details.');
@@ -69,9 +66,12 @@ const UserDetailPage = () => {
         
         
       <> 
-      
+      {user && (
+
       <UserDetailsHeaderInfo user={user} />
       <UserDetailsMainInfo user={user} />
+      )}
+      
  
       </>
        

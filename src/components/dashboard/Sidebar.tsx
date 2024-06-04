@@ -1,7 +1,7 @@
 
 import {SidebarNavigationData} from '../../utils/SidebarNavigation'
 import SidebarLink from './SidebarLink';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import '../../styles/components/dashboard/sidebar.scss'
 import lendsqrLogo from '../../assets/images/logo.svg'
 import closeIcon from '../../assets/icons/navbar/close.svg'
@@ -14,8 +14,7 @@ interface SidebarProps {
 const Sidebar = ({ isOpen, toggleSidebar }:SidebarProps) => {
 
     const pathname:string = useLocation().pathname;
-	// const navigate = useNavigate();
-
+	
 
     const isRouteActive = (route:string) => {
 		if (pathname === '/dashboard' && route === '/dashboard') {

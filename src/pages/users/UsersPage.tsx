@@ -4,22 +4,21 @@ import axios from 'axios';
 import UsersTable from '../../components/table/UsersTable';
 import { useEffect, useState } from 'react';
 import downArrowIcon from '../../assets/icons/pages/down-arrow.svg'
-import usersData from '../../utils/users-data.json'
 import '../../styles/pages/users.scss'
+import PageLoader from '../../components/loaders/PageLoader';
 
 
 const UsersPage = () => {
 
 	const [loading, setLoading] = useState<boolean>(false);
-	// const [users, setUsers] = useState([]);
-	const [users, setUsers] = useState(usersData);
+	const [users, setUsers] = useState([]);
 	const [currentItems, setCurrentItems] = useState([]);
 	const [pageCount, setPageCount] = useState(0);
 	const [itemOffset, setItemOffset] = useState(0);
 	const itemsPerPage = 9;
 
 	// Used to show other users not on current page 
-	const handlePageChange = (event: _any) => {
+	const handlePageChange = (event) => {
 		const newOffset = (event.selected * itemsPerPage) % users.length;
 		setItemOffset(newOffset);
 	};
@@ -30,7 +29,6 @@ const UsersPage = () => {
 		await axios.get(`${import.meta.env.VITE_MOCK_API_GENERATOR_URL}`)
 			.then((response) => {
 				setUsers(response.data);
-				console.log('DATA------>',response.data);
 				setLoading(false);
 			})
 			.catch((error) => {
@@ -59,12 +57,13 @@ const UsersPage = () => {
 
       {loading ? (
 					<div>
-						{/* <Loader /> */}
-						Loading
+						<PageLoader />
+						
 					</div>
 				) : (
 					<>
 						<UsersTable users={currentItems}  />
+					
 						<div className="users-page__paginate">
 							<div className="users-page__paginate-info">
 								<p>
@@ -89,13 +88,10 @@ const UsersPage = () => {
 								breakLabel="..."
 								containerClassName="users-page__pagination-container"
 								activeClassName="users-page__active-page"
-								
 							/>
 						</div>
 					</>
 				)}
-
-      
    </div>
   )
 }
