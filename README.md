@@ -10,8 +10,7 @@ At Lendsqr, many of our lenders use web apps to reach over half a million custom
 This project was completed as the assessment test for the role of Frontend Engineer at Lendsqr.
 The aim of the assessment is to replicate a mirror image of the figma design below using react, typescript and scss, fetching users data from mock api endpoints and ensuring the application is responsive.
 
---> Figma Link: 
-https://www.figma.com/design/ZKILoCoIoy1IESdBpq3GNC/Lendsqr-Frontend-Engineering-Assessment?node-id=5530-0&t=Cj3DPxLzOOklPnrT-0 
+
 
 --> Mock api endpoints
 
@@ -57,3 +56,7 @@ To start project in development mode
 ## Build Project for production
 
     $ npm run build
+
+## Run Tests
+
+    $ npm run test
