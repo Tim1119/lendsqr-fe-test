@@ -17,7 +17,7 @@ const SidebarLink = ({title,icon,link,toggleIcon,id,header,isActive}:SidebarLink
     
     {!header ? (
 
-    <Link to={link} className={`sidebarlink ${isActive && "sidebarlink--active"} ${!isActive && "sidebarlink--hover"} ${id < 3 && "sidebarlink--bigger"} ${id===26 && 'border--top'}`}>
+    <Link to={link} className={`sidebarlink ${isActive && "sidebarlink--active"} ${id === 26 && 'sidebarlink__logout'} ${!isActive && "sidebarlink--hover"} ${id < 3 || id > 25 && "sidebarlink--bigger"} ${id===26 && 'border--top'}`}>
       {icon &&
         <span className="sidebarlink__icon-container" >
          <img className="sidebarlink__icon" src={icon} alt={`${title}-icon`} />
@@ -32,6 +32,8 @@ const SidebarLink = ({title,icon,link,toggleIcon,id,header,isActive}:SidebarLink
     </li>
 
     )}
+    {id === 26 && <small className="sidebarlink__version" >v1.2.0 </small> }
+   
     </>
   )
 }
