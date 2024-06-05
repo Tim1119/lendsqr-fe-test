@@ -1,17 +1,20 @@
-import { render, screen,waitFor } from '@testing-library/react';
-import axios from 'axios';
+import { render, screen} from '@testing-library/react';
 import { describe, it, beforeAll, afterEach, afterAll,expect } from 'vitest';
 import UserDetailPage from '../pages/user/UserDetailPage';
 import { BrowserRouter } from 'react-router-dom';
-import { http, RestRequest, ResponseComposition, RestContext } from 'msw';
+import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
 
 
+
 const server = setupServer(
-	http.get(`${import.meta.env.VITE_MOCK_API_GENERATOR_URL}/users/${`SQFf8197g95`}`, (req: RestRequest, res: ResponseComposition, ctx: RestContext) => {
-		return res(ctx.json({ user: 'test-single-user-detail' }));
+	// eslint-disable-next-line no-empty-pattern
+	http.get(`${import.meta.env.VITE_MOCK_API_GENERATOR_URL}/users/${`SQFf8197g95`}`, ({ }) => {
+		return HttpResponse.json({ user: 'test-single-user-detail' });
 	})
 );
+
+
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
