@@ -44,7 +44,7 @@ const LoginForm = () => {
             <div className='login-form__input-password' >
 
             <input type={showPassword ? "text" : "password"} placeholder="Password"  {...register("password", { required: true })} />
-            <span className="login-form__password-toggler" onClick={togglePassword} >{showPassword ? "HIDE" : "SHOW"}</span>
+            <span  className="login-form__password-toggler" onClick={togglePassword} >{showPassword ? "HIDE" : "SHOW"}</span>
             </div>
             {errors.password && <span className="login-form__error-message" >Password is required</span>}
         </div>

@@ -7,7 +7,7 @@ interface UserDetailsMainProps{
 
 const UserDetailsMain = ({user}:UserDetailsMainProps) => {
   return (
-    <div className="user-details-main">
+    <div data-testid="detail-page-main-card"className="user-details-main">
 			<div className="user-details-main__card">
 				<h2>Personal Information</h2>
 				<div className="user-details-main__info">

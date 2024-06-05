@@ -29,6 +29,7 @@ Required
 4. Jest
 
 Others Include
+
 5. React Loader Spinner
 6. React Hook Form
 7. React Paginate

@@ -33,7 +33,7 @@ const UsersPage = () => {
 				setLoading(false);
 			})
 			.catch((error) => {
-				const err = error.response.data;
+				const err = error.response?.data;
 				console.log(err);
 				setLoading(false);
 				setError("Failed to fetch user details.");
@@ -53,7 +53,7 @@ const UsersPage = () => {
 
   return (
    <div className='users-page' >
-      <h3 className='users-page__title'>Users</h3>
+      <h3 data-testid="users-page-title" className='users-page__title'>Users</h3>
 
       <UsersInfoCardRow />
 
@@ -66,10 +66,10 @@ const UsersPage = () => {
 					<>
 						<UsersTable users={currentItems}  />
 					
-						<div className="users-page__paginate">
+						<div className="users-page__paginate" data-testid="users-page-pagination">
 							<div className="users-page__paginate-info">
 								<p>
-									Showing{' '}
+									Showing {' '}
 									<span>
 										{itemOffset + itemsPerPage} <img src={downArrowIcon} alt="down arrow" />
 									</span>{' '}

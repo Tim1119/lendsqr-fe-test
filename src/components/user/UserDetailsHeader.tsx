@@ -11,7 +11,7 @@ interface UserDetailsHeader{
 const UserDetailsHeader = ({user}:UserDetailsHeader) => {
    
   return (
-    <div className='user-details-header' >
+    <div data-testid="detail-page-top-card" className='user-details-header' >
         <div className="user-details-header__top-info">
             <div className='user-details-header__profile-and-name-container'>
                  

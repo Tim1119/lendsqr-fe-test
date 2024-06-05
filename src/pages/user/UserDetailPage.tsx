@@ -50,7 +50,7 @@ const UserDetailPage = () => {
   }, [userId]); 
 
   return (
-    <div className='users-detail-page' >
+    <div data-testid="user-detail-page" className='users-detail-page' >
       <Link className='users-detail-page__back-page-icon' to="/dashboard/users" ><img src={arrowLeft} alt="arrow-left" /><span  >Back to Users</span></Link>
       <div className='users-detail-page__header-container' >
         <h3 className='users-detail-page__page-title'> User Details</h3>
